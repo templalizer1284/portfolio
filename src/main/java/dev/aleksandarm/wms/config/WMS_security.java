@@ -34,8 +34,8 @@ public class WMS_security {
 	public UserDetailsService userDetailsService() {
 		UserDetails user = 
 				User.withDefaultPasswordEncoder()
-				.username("admin")
-				.password("expansion123")
+				.username("")
+				.password("")
 				.roles("USER")
 				.build();
 		
