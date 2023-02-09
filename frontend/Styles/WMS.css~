@@ -1,0 +1,295 @@
+@import "Common.css";
+
+.WMS_navbar {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    transition: height 0.2s;
+    padding: 0 20px 0 20px;
+    z-index: 10;
+}
+
+.WMS_toolbar {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    top: 80px;
+    left: 0;
+    right: 0;
+    height: 80px;
+    padding: 0 20px 0 20px;
+    z-index: 10;
+}
+
+.WMS_toolbar_button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 10px 10px 15px 10px;
+    user-select: none;
+}
+
+.WMS_toolbar_button:hover {
+    box-shadow: 0 0 5px rgba(255,255,255,0.5)
+}
+
+.WMS_toolbar_button:active {
+    opacity: 0.8;
+}
+
+.WMS_toolbar_button img {
+    filter: invert(90%);
+    width: inherit;
+    height: inherit;
+}
+
+.WMS_toolbar_button p {
+    font-size: 10px;
+    margin: 0;
+}
+
+#WMS_footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30px;
+    color: #F3EFE0;
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.WMS_mainContent {
+    font-family: Roboto;
+    padding: 170px 20px 20px 20px;
+}
+
+#footer_license {
+    text-decoration: underline;
+}
+
+#footer_license:hover {
+    cursor: pointer;
+}
+
+#WMS_footer p {
+    margin: 0;
+}
+
+.Background_Image {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 200px;
+    filter: invert(70%);
+    opacity: 0.25;
+    z-index: -10;
+    user-select: none;
+}
+
+#layout_schemes {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+    border-width: 3px;
+    width: 100%;
+    height: 400px;
+}
+
+#layout_schemes p{
+    margin: 0;
+}
+
+.schemes_title {
+    position: absolute;
+    top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#layout_warehouses {
+    position: relative;
+    flex: 2;
+    border-right-style: solid;
+    border-right-color: black;
+    border-right-width: 2px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    align-items: center;
+}
+
+#layout_items {
+    position: relative;
+    flex: 1;
+    padding-top: 50px;
+    padding-left: 10px;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.layout_warehouse_entry {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 120px;
+    border-style: solid;
+    border-color: #22A39F;
+    border-width: 3px;
+    border-radius: 1px;
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: 0.2s;
+    user-select: none;
+}
+
+.layout_item_entry {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    width: 170px;
+    opacity: 0.7;
+    margin-bottom: 5px;
+    transition: 0.2s;
+}
+
+.layout_item_entry:hover {
+    opacity: 1.0;
+}
+.layout_warehouse_entry:hover {
+    border-color: black;
+}
+
+.layout_warehouse_entry:active {
+    border-color: #22A39F;
+}
+
+.layout_forms {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.layout_forms button {
+    width: 120px;
+    padding: 7px 17px 7px 17px;
+}
+
+.layout_forms p{
+    margin: 0;
+    display: inline-block;
+}
+
+.location_form_entry {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location_form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    width: 330px;
+}
+
+.location_add {
+    display: flex;
+    flex-direction: column;
+}
+
+#Inventory {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.inventory_form {
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+}
+
+.inventory_form_entry {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+}
+
+.inventory_form button {
+    width: 120px;
+    padding: 7px 17px 7px 17px;
+}
+
+.loading_gif {
+    width: 60px;
+    height: 60px;
+}
+
+.notif {
+    position: fixed;
+    bottom: 50px;
+    right:20px;
+    margin-top: 10px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 2px;
+    padding: 10px 20px 10px 20px;
+    font-size: 15px;
+}
+
+#navbar_back {
+    width: 80px;
+    height: 100%;
+    border-style: none;
+    background-color: #434242;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar_back p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #EEEEEE;
+}
+
+#navbar_back:hover {
+    opacity: 0.8;
+}
+
+#navbar_back:active {
+    opacity: 1.0;
+}

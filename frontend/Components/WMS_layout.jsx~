@@ -1,0 +1,183 @@
+import { useState, useEffect, useRef } from "react";
+import axios from "axios";
+
+function fetchItems(location, setItems) {  
+    axios.get("http://localhost:8080/api/wms/layout/fetch_items", {
+	params: {
+	    location: location
+	}
+    }
+	     )
+
+	.then((res) => {
+	    function mapItems() {
+		return(
+		    <>
+			{res.data.map( ({id,name,quantity}) => (
+			    <div key={id} className="layout_item_entry">
+				<p><span style={{fontWeight: "bold"}}>Name:</span> {name}</p>
+				<p style={{fontSize: 14}}><span style={{fontWeight: "bold"}}>Quantity:</span> <span style={{color: "blue"}}>{quantity}</span></p>
+			    </div>
+			))}
+		    </>
+		);
+	    }
+
+	    if(res.data.length > 0) {
+		// ok
+	    } else {
+		setItems("No items at this location.");
+		return;
+	    }
+	    
+	    let data = mapItems();
+	    setItems(data);
+	})
+
+	.catch((err) => {
+	    console.log(err);
+	});
+}
+
+function fetchWarehouse(res, setItems) {
+    return(
+	<>
+	    {res.data.map( ({id,name,description}) => (
+                <div key={id} className="layout_warehouse_entry" onClick={() => {
+			 fetchItems(name, setItems);
+		     }}>
+		    <p style={ {fontWeight: "bold"} }>{name}</p>
+		    <p style={ {fontSize: 12, marginTop: 10} }>{description}</p>
+		</div>
+	    ))}
+	</>
+    );
+}
+
+export default function WMSLayout() {
+    
+    const [ WarehouseState, setWarehouseState ] = useState();
+    const [ ItemsState, setItemsState ] = useState();
+    const [ console, setConsole] = useState();
+    const [ locations, setLocations ] = useState();
+
+    const refs = {
+	inputAddNameRef: useRef(null),
+	inputAddDescRef: useRef(null),
+	inputDeleteNameRef: useRef(null)
+    };
+
+    useEffect(() => {
+	const interval = setInterval(() => {
+	    axios.get("http://localhost:8080/api/wms/layout/location_get")
+		.then((res) => {
+		    setWarehouseState(fetchWarehouse(res, setItemsState));
+		    setLocations(() => {
+			return(
+			    <>
+			    {res.data.map( ({id,name}) => (
+				<option key={id} value={name}>{name}</option>
+			    ))}
+			    </>
+			);
+		    });
+		})
+		.catch((err) => {
+		    console.log(err);
+		});
+	}, 1000);
+
+	return () => {
+	    clearInterval(interval);
+	}
+    }, []);
+
+    function registerLocation() {
+	axios.get("http://localhost:8080/api/wms/layout/location_add", {
+	    params: {
+		name: refs.inputAddNameRef.current.value,
+		description: refs.inputAddDescRef.current.value
+	    }
+	})
+
+	    .then((res) => {
+		setConsole(res.data);
+	    })
+
+	    .catch((err) => {
+		console.log(err);
+	    });
+
+	refs.inputAddNameRef.current.value = "";
+	refs.inputAddDescRef.current.value = "";
+    }
+
+    function deleteLocation() {
+	axios.get("http://localhost:8080/api/wms/layout/location_delete", {
+	    params: {
+		name: refs.inputDeleteNameRef.current.value
+	    }
+	})
+	    .then((res) => {
+		setConsole(res.data);
+	    })
+	    .catch((err) => {
+		console.log(err);
+	    });
+    }
+    
+    return(
+        <div className="WMS_Layout">
+            <div id="layout_schemes">
+		<div id="layout_warehouses">
+		    <p className="schemes_title">Warehouse layout</p>
+		    {WarehouseState}
+		</div>
+		<div id="layout_items">
+                    <p className="schemes_title">Items</p>
+		    {ItemsState}
+		</div>
+	    </div>
+
+            <div className="layout_forms">
+                <div className="location_form">
+                    <h2>Register location:</h2>
+                    <div className="location_form_entry">
+                        <p>Name: </p>
+			<input ref={refs.inputAddNameRef} type="text" id="input_location_name"/>
+		    </div>
+                    <div className="location_form_entry">
+                        <p>Description: </p>
+			<input ref={refs.inputAddDescRef} type="text" id="input_location_desc"/>
+		    </div>
+                    <div className="button-center">
+			<button onClick={registerLocation} className="my-buttons">Register</button>
+		    </div>
+		</div>
+
+                <div className="location_form">
+		    <h2 style={{marginBottom: 8}}>Delete location:</h2>
+                    <p style={{fontSize: 13}}>Note: By deleting locations, all items within that location will be lost. Be sure to relocate them.</p>
+		    <div className="location_form_entry">
+			<label for="locations">Location: </label>
+
+			<select name="locations" ref={refs.inputDeleteNameRef}>
+			    {locations}
+			</select> 
+		    </div>
+		    <div className="button-center">
+			<button onClick={deleteLocation} className="my-buttons" style={{backgroundColor: "#aa0000"}}>Delete</button>
+		    </div>
+		</div>
+	    </div>
+
+            <div id="Console">
+                <div id="Console_title">
+		    <p>Console Prompt:</p>
+		</div>
+		{console}
+	    </div>
+	
+	</div>
+    );
+}

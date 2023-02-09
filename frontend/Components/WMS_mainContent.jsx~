@@ -1,0 +1,5 @@
+export default function WMS_mainContent(props) {
+    <div className="WMS_mainContent">
+	
+    </div>
+}

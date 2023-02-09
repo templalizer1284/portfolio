@@ -1,0 +1,19 @@
+#PorfolioMenu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.port_entry {
+    border-style: solid;
+    border-width: 1px;
+    font-size: 20px;
+    width: 200px;
+    text-align: center;
+    user-select: none;
+}
+
+.port_entry:hover {
+    background-color: black;
+    color: white;
+}

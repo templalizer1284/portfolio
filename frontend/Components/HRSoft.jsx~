@@ -1,0 +1,47 @@
+import "../Styles/HRSoft.css";
+
+function HRFooter() {
+    return(
+        <div id="HRFooter">
+	    
+	</div>
+    );
+}
+
+function HRPanelButton() {
+    return(
+        <div className="HRPanelButton">
+	    
+	</div>
+    );
+}
+
+function HRPanel() {
+    return(
+	<div id="HRPanel">
+            <p style={{
+		   fontWeight: "bold",
+		   fontSize: 18
+	       }}>HRSoft</p>
+	</div>
+    );
+}
+
+function HRMainContent() {
+    return(
+        <div id="HRMainContent">
+	    
+	</div>
+    );
+}
+
+export default function HRSoft() {
+    return(
+        <div id="HRSoft">
+	    <HRPanel />
+	    <HRMainContent
+		
+	    />
+	</div>
+    );
+}

@@ -1,0 +1,15 @@
+import Inventory_Icon from "../Media/Inventory_icon.svg";
+
+export default function WMS_toolbar(props) {
+
+    const Inventory_Button = {
+	name: "Inventory",
+	icon: Inventory_Icon
+    };
+    
+    return(
+        <div className="WMS_toolbar my-panel">
+	    
+	</div>
+    );
+}

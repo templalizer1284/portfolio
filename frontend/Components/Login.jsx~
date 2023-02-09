@@ -1,0 +1,11 @@
+import "../Styles/Login.css";
+
+export default function Login() {
+    return(
+        <div id="Login">
+            <input type="text" placeholder="Username"/>
+            <input type="password" placeholder="Password"/>
+            <button id="login-button">Login</button>
+	</div>
+    );
+}

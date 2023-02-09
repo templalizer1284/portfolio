@@ -1,0 +1,23 @@
+#HRSoft {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #F7EFE5;
+}
+
+#HRSoft p {
+    color: #F7EFE5;
+}
+
+#HRPanel {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    background-color: #674188;
+    padding-left: 10px;
+    padding-top: 10px;
+}

@@ -1,0 +1,9 @@
+
+
+export default function WMS_toolbar_button(props) {
+    return(
+	<div className="WMS_toolbar_button">
+	    
+	</div>
+    );
+}

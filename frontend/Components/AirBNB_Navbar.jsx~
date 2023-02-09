@@ -1,0 +1,14 @@
+import "../Styles/AirBNB_Navbar.css";
+
+import airbnbLogo from "../Media/airbnb-logo.png";
+
+export default function AirBNB_Navbar() {
+    return(
+        <nav class="Navbar">
+            <div className="logo">
+                <img alt="Airbnb Logo" src={airbnbLogo}/>
+	    </div>
+            <div className="logo-text">airbnb</div>
+	</nav>
+    )
+}
