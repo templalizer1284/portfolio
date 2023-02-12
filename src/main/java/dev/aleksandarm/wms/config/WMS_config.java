@@ -22,6 +22,9 @@ public class WMS_config implements WebMvcConfigurer{
 //				registry.addMapping("/api/wms/layout/location_add")
 //				.allowedOrigins("http://localhost:3000")
 //				.allowedMethods("GET");
+				registry.addMapping("/api/wms/layout/location_get")
+				.allowedOrigins("http://localhost:3000")
+				.allowedMethods("GET");
 				}
 		};
 	}

@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.041e05cb.css",
+    "main.js": "/static/js/main.06b3cd0e.js",
+    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/10.png": "/static/media/10.f4b083421fbc342c6da1.png",
+    "static/media/5.png": "/static/media/5.5d736ac3dc01f817ff4d.png",
+    "static/media/9.png": "/static/media/9.d6e070513b1e39f678bf.png",
+    "static/media/1.png": "/static/media/1.04833403c74724e1deff.png",
+    "static/media/11.png": "/static/media/11.fd8c95cd7e679f07b311.png",
+    "static/media/7.png": "/static/media/7.bc37e6ccff141453861a.png",
+    "static/media/12.png": "/static/media/12.c014ba2f97357a4c93c4.png",
+    "static/media/8.png": "/static/media/8.c014ba2f97357a4c93c4.png",
+    "static/media/3.png": "/static/media/3.0adc5d1ca2d82d0fa481.png",
+    "static/media/4.png": "/static/media/4.1bf05689c6d3e178e2dd.png",
+    "static/media/6.png": "/static/media/6.9978c5b012896f7188c1.png",
+    "static/media/13.png": "/static/media/13.dd226be3cd804505d909.png",
+    "static/media/2.png": "/static/media/2.057326c626e54dd53ad0.png",
+    "static/media/loading.gif": "/static/media/loading.803f24369a085e35482e.gif",
+    "static/media/airbnb-logo.png": "/static/media/airbnb-logo.dcb558306cc47aee84eb.png",
+    "static/media/settings.svg": "/static/media/settings.227db5dbe35d440e9fa47330dfbd5baf.svg",
+    "static/media/Inventory_icon.svg": "/static/media/Inventory_icon.75e1bd80f30f238249c2475de20783ac.svg",
+    "static/media/home.svg": "/static/media/home.c9109c9075853e558a88c718b4fa9991.svg",
+    "static/media/warehouse.svg": "/static/media/warehouse.c4b7e831f24d5cb318322746f27797a7.svg",
+    "index.html": "/index.html",
+    "static/media/layout.svg": "/static/media/layout.1023b67ec4ab80527dd951e3122a4b6e.svg",
+    "main.041e05cb.css.map": "/static/css/main.041e05cb.css.map",
+    "main.06b3cd0e.js.map": "/static/js/main.06b3cd0e.js.map",
+    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.041e05cb.css",
+    "static/js/main.06b3cd0e.js"
+  ]
+}

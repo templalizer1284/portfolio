@@ -9,6 +9,7 @@ import WMS from "./Components/WMS.jsx";
 import AirBNB from "./Components/AirBNB.jsx";
 import HRSoft from "./Components/HRSoft.jsx";
 import DataUPDOWN from "./Components/DataUPDOWN.jsx";
+import VideoStreaming from "./Components/VideoStreaming.jsx";
 
 function MenuEntry(props) {
     return(
@@ -39,9 +40,14 @@ function Menu(props) {
 		content={<HRSoft />}
 	    />
 	    <MenuEntry
-		name="Data Upload/Download"
+		name="Data Upload/Download Service"
 		setter={props.setter}
 		content={<DataUPDOWN />}
+	    />
+	    <MenuEntry
+		name="Video Streaming Service"
+		setter={props.setter}
+		content={<VideoStreaming />}
 	    />
 	</div>
     );

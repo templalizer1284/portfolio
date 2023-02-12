@@ -1,3 +1,5 @@
+@import "Common.css";
+
 #HRSoft {
     position: fixed;
     top: 0;
@@ -5,10 +7,21 @@
     right: 0;
     left: 0;
     background-color: #F7EFE5;
+    font-family: Roboto;
 }
 
 #HRSoft p {
     color: #F7EFE5;
+    font-size: 20px;
+}
+
+#HRSoft input, #HRSoft select {
+    font-size: 15px;
+    padding: 2px 3px 2px 3px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 3px;
+    border-color: mediumslateblue;
 }
 
 #HRFooter {
@@ -35,6 +48,7 @@
     padding-left: 10px;
     padding-top: 10px;
     display: flex;
+    row-gap: 5px;
     flex-direction: column;
     align-items: center;
 }
@@ -51,11 +65,10 @@
     border-bottom-style: solid;
 }
 
-#HRPanelButtonSection {
+.HRPanelButtonSection {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
 }
 
 #HRPanelHead:hover {
@@ -65,9 +78,10 @@
 .HRPanelButton {
     background-color: #C3ACD0;
     color: #EEEEEE;
-    text-shadow: 0 0 5px rgba(0,0,0,0.8);
+    text-shadow: 0 0 5px rgba(0,0,0,1);
     padding: 10px 20px 10px 20px;
     user-select: none;
+    width: 120px;
 }
 
 .HRPanelButton:hover {
@@ -79,7 +93,8 @@
 }
 
 #HRBackground {
-    opacity: 0.05;
+    opacity: 0.2;
+    filter: grayscale(100%);
     z-index: -10;
     position: fixed;
     bottom: -100px;
@@ -99,7 +114,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 300px;
+    width: 1000px;
+    column-gap: 200px;
 }
 
 .FormEntry { 
@@ -110,9 +126,132 @@
     width: inherit;
 }
 
+.FormEntry input {
+    width: 230px;
+}
+
 .HRForm {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.HRPanelCategory {
+    font-size: 20px;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.content_button {
+    color: white;
+    background-color: #674188;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 20px 10px 20px;
+    border-style: none;
+    border-radius: 5px;
+}
+
+.content_button:hover {
+    opacity: 0.8;
+}
+
+.content_button:active {
+    opacity: 1.0;
+}
+
+#HRTermination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+#HRTimeOff {
+    width: 350px;
+}
+
+#HRExpensesManage, #HRExpensesInvoice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+    padding-left: 50px;
+    width: 750px;
+}
+
+#HREmployeeList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 800px;
+    row-gap: 20px;
+}
+
+.employee_list_entry {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border-style: solid;
+    border-color: #674188;
+    border-width: 2px;
+    border-radius: 3px;
+    transition: 0.2s;
+}
+
+.employee_list_entry:hover {
+    border-color: black;
+    border-style: dotted;
+}
+
+.employee_list_entry > p {
+    font-size: 15px;
+    font-color: black;
+}
+
+.loading {
+    position: relative;
+}
+
+.loading img{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+#warning_overlay {
+    display: flex;
+    position: absolute;
+    left: 280px;
+    flex-direction: row;
+    column-gap: 5px;
+    align-items: center;
+    transition: opacity 0.1s;
+}
+
+#warning_text {
+    color: #EA0000;
+    background-color: rgba(0,0,0,0.8);
+    opacity: 0.0;
+    transition: opacity 0.2s;
+    width: 358px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+}
+
+.warning img{
+    width: 30px;
+    height: 30px;
+}
+
+#HRListExpenses {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+#HRExpensesCalculate {
+    position: relative;
+    width: 400px;
 }
