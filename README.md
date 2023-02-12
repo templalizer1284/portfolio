@@ -9,6 +9,8 @@ This project in its final form will consist of:
 4. Video Streaming Website
 5. `DONE` HRSoft - Human resource management software.
 
+6. Final Polishing
+
 Currently, security is not implemented.
 
 <h1>Screenshots</h1>
