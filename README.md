@@ -11,6 +11,16 @@ This project in its final form will consist of:
 
 Currently, security is not implemented.
 
-![WMS - Preview 1](https://github.com/templalizer1284/portfolio/raw/main/screenshots/portfolio_preview_wms_1.png)
-![WMS - Preview 2](https://github.com/templalizer1284/portfolio/blob/main/screenshots/portfolio_preview_wms_2.png)
-![AirBNB Design](https://github.com/templalizer1284/portfolio/blob/main/screenshots/portfolio_preview_airbnb.png)
+<h1>Screenshots</h1>
+
+<h2>WMS Software.<h2>
+<img src="https://github.com/templalizer1284/portfolio/raw/main/screenshots/portfolio_preview_wms_1.png" style="width: 600px" />
+<img src="https://github.com/templalizer1284/portfolio/raw/main/screenshots/portfolio_preview_wms_2.png" style="width: 600px" />
+
+<h2>AirBNB Design Clone</h2>
+<img src="https://github.com/templalizer1284/portfolio/raw/main/screenshots/portfolio_preview_airbnb.png" style="width: 600px" />
+
+<h2>HRSoft Preview</h2>
+<img src="https://github.com/templalizer1284/portfolio/raw/main/screenshots/hrsoft_1.png" style="width: 600px" />
+<img src="https://github.com/templalizer1284/portfolio/raw/main/screenshots/hrsoft_2.png" style="width: 600px" />
+<img src="https://github.com/templalizer1284/portfolio/raw/main/screenshots/hrsoft_3.png" style="width: 600px" />
