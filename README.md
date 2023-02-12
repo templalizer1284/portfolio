@@ -3,11 +3,11 @@ Personal portfolio showcase(Still work in progress).
 
 This project in its final form will consist of:
 
-1. WMS - Warehouse management software
-2. AirBNB - Design Clone of AirBNB(Without backend)
+1. `DONE` WMS - Warehouse management software
+2. `DONE` AirBNB - Design Clone of AirBNB(Without backend)
 3. Data Upload/Download Website
 4. Video Streaming Website
-5. HRSoft - Human resource management software.
+5. `DONE` HRSoft - Human resource management software.
 
 Currently, security is not implemented.
 
