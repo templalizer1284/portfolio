@@ -9,7 +9,10 @@ This project in its final form will consist of:
 4. Video Streaming Website
 5. `DONE` HRSoft - Human resource management software.
 
-6. Final Polishing
+Portfolio will be ready after these two are done:
+
+1. Develop all five projects noted up there.
+2. Final polishing of everything.
 
 Currently, security is not implemented.
 
