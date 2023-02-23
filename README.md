@@ -32,3 +32,7 @@ Currently, basic security is implemented. (Spring Security Defaults, good enough
 
 <h2>Data Upload/Download Service</h2>
 <img src="https://github.com/templalizer1284/portfolio/blob/main/screenshots/dataupdown.png" style="width: 600px" />
+
+<h2>VideoStream Service</h2>
+<img src="https://github.com/templalizer1284/portfolio/raw/main/screenshots/vstream.png" style="width: 600px" />
+<img src="https://github.com/templalizer1284/portfolio/raw/main/screenshots/vstream2.png" style="width: 600px" />
