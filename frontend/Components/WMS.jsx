@@ -9,8 +9,6 @@ import WMSToolbar from "./WMS_toolbar.jsx";
 import WMSMainContent from "./WMS_mainContent.jsx";
 import WMSFooter from "./WMS_footer.jsx";
 
-import FetchWMSData from "../include/FetchWMSData.jsx";
-
 import "../Styles/WMS.css";
 
 export default function WMS(props) {

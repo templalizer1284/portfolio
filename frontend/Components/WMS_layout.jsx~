@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 
+import LoadingGIF from "../Media/loading.gif";
+
 function fetchItems(location, setItems) {  
     axios.get("http://localhost:8080/api/wms/layout/fetch_items", {
 	params: {
@@ -13,9 +15,10 @@ function fetchItems(location, setItems) {
 	    function mapItems() {
 		return(
 		    <>
-			{res.data.map( ({id,name,quantity}) => (
+			{res.data.map( ({id,name,quantity,reference}) => (
 			    <div key={id} className="layout_item_entry">
 				<p><span style={{fontWeight: "bold"}}>Name:</span> {name}</p>
+				<p style={ {fontWeight: "bold", fontSize: 14} }>Ref: {reference}</p>
 				<p style={{fontSize: 14}}><span style={{fontWeight: "bold"}}>Quantity:</span> <span style={{color: "blue"}}>{quantity}</span></p>
 			    </div>
 			))}
@@ -55,8 +58,8 @@ function fetchWarehouse(res, setItems) {
 }
 
 export default function WMSLayout() {
-    
-    const [ WarehouseState, setWarehouseState ] = useState();
+
+    const [ WarehouseState, setWarehouseState ] = useState(<img className="loading_gif" src={LoadingGIF}/>);
     const [ ItemsState, setItemsState ] = useState();
     const [ console, setConsole] = useState();
     const [ locations, setLocations ] = useState();
@@ -159,14 +162,13 @@ export default function WMSLayout() {
 		    <h2 style={{marginBottom: 8}}>Delete location:</h2>
                     <p style={{fontSize: 13}}>Note: By deleting locations, all items within that location will be lost. Be sure to relocate them.</p>
 		    <div className="location_form_entry">
-			<label for="locations">Location: </label>
-
+			<label htmlFor="locations">Location: </label>
 			<select name="locations" ref={refs.inputDeleteNameRef}>
 			    {locations}
 			</select> 
 		    </div>
 		    <div className="button-center">
-			<button onClick={deleteLocation} className="my-buttons" style={{backgroundColor: "#aa0000"}}>Delete</button>
+			<button onClick={deleteLocation} className="my-buttons" style={{color: "#FF0000"}}>Delete</button>
 		    </div>
 		</div>
 	    </div>

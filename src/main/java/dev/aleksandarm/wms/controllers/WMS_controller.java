@@ -15,7 +15,6 @@ import dev.aleksandarm.wms.models.WMS_item;
 import dev.aleksandarm.wms.models.WMS_location;
 import dev.aleksandarm.wms.repos.WMS_item_repo;
 import dev.aleksandarm.wms.repos.WMS_location_repo;
-import dev.aleksandarm.wms.services.WMS_service_implementation;
 
 @CrossOrigin("http://localhost:3000")
 @RestController
@@ -26,9 +25,6 @@ public class WMS_controller {
 	
 	@Autowired
 	WMS_item_repo item_repo;
-	
-	@Autowired
-	WMS_service_implementation service;
 	
 	@GetMapping(path = "/api/wms/layout/location_get")
 	public List<WMS_location> location_get() {
@@ -68,11 +64,6 @@ public class WMS_controller {
 	public List<WMS_item> fetch_items(@RequestParam("location") String location) {
 		List<WMS_item> items = item_repo.findAllByLocation(location);
 		return items;
-	}
-	
-	@PostMapping(path = "/api/wms/login")
-	public String login() {
-		return "test";
 	}
 	
 	@PostMapping(path = "/api/wms/inventory/register",

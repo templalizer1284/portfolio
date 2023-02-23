@@ -1,0 +1,210 @@
+@import "Common.css";
+
+#VideoStreaming {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #171717;
+    color: #EDEDED;
+}
+
+#VStreamHead {
+    background-color: #222222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: height 0.5s;
+}
+
+#VStreamLogo {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#VStreamLogo img {
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+}
+
+#VStreamLogo:hover > img {
+    opacity: 0.5;
+}
+
+.VStreamHeadButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #DA0037;
+    padding: 10px 20px 10px 20px;
+    font-weight: bold;
+    border-style: none;
+    border-radius: 1px;
+    color: #EDEDED;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    transition: 0.5s, opacity 0.1s;
+    width: min-content;
+    height: 50px;
+}
+
+.VStreamHeadButton:hover {
+    opacity: 0.9;
+}
+
+.VStreamHeadButton:active {
+    opacity: 0.5;
+}
+
+#VStreamUploadForm {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    width: 450px;
+    background-color: #222222;
+    row-gap: 10px;
+    padding: 20px;
+    z-index: 100;
+}
+
+.VStreamUploadFormEntry {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.VStreamUploadFormEntry input {
+    background-color: #171717;
+    border-style: solid;
+    border-color: #444444;
+    color: #EDEDED;
+    font-size: 20px;
+}
+
+#VStreamUploadFormEntry {
+    width: 450px;
+    height: 300px;
+    border-style: solid;
+    border-color: #444444;
+    border-width: 1px;
+    background-color: #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#VStreamUploadFormEntry img {
+    position: relative;
+    filter: invert(13%);
+    height: 180px;
+    user-select: none;
+}
+
+#upload_file_entry {
+    width: 100%;
+}
+
+#VStreamUploadButton {
+    top: 468px;
+    left: 60px;
+    width: 132px;
+}
+
+#VStreamCloseButton {
+    top: 468px;
+    right: 70px;
+}
+
+#VStreamContent {
+    overflow: scroll;
+    position: relative;
+    z-index: -5;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+canvas {
+    display: none;
+}
+
+.Video {
+    display: flex;
+    position: relative;
+    z-index: -1;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    text-overflow: ellipsis;
+    width: 426px;
+    height: 219px;
+}
+
+.Video video {
+    position: absolute;
+    width: inherit;
+    height: 180px;
+}
+
+.Video img {
+    width: 300px;
+    height: 200px;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.close_button {
+    filter: invert(80%);
+    transform: scale(0.08);
+    position: absolute;
+    bottom: -90px;
+    right: -110px;
+    opacity: 0;
+}
+
+.Video:hover > .close_button {
+    opacity: 1.0;
+}
+
+.VideoOverlay {
+    position: absolute;
+    opacity: 0;
+    width: 300px;
+    height: 200px;
+    transition: 0.1s;
+}
+
+.VideoOverlay:hover {
+    opacity: 1.0;
+}
+
+.VideoOverlay img {
+    transform: scale(0.5);
+    filter: invert(100%);
+}
+
+#VStreamNotif {
+    position: absolute;
+    right: -214px;
+    bottom: -77px;
+}
+
+#VStreamNotif img {
+    filter: invert(80%);
+    transform: scale(0.2);
+}

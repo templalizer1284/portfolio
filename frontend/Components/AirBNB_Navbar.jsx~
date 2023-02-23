@@ -6,9 +6,10 @@ export default function AirBNB_Navbar() {
     return(
         <nav class="Navbar">
             <div className="logo">
-                <img alt="Airbnb Logo" src={airbnbLogo}/>
+                <img alt="Airbnb Logo" src={airbnbLogo} />
+		<div className="logo-text">airbnb</div>
 	    </div>
-            <div className="logo-text">airbnb</div>
+            <a href={"http://localhost:3000"}>Back</a>
 	</nav>
     )
 }

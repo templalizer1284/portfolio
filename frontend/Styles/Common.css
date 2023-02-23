@@ -35,9 +35,12 @@ body select:active {
 
 .button-center {
     display: flex;
+    flex-direction: row;
+    column-gap: 5px;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
+    position: relative;
 }
 
 .Console_text_ok {

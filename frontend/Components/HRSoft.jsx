@@ -6,6 +6,18 @@ import HRBackgroundImage from "../Media/hs_background.svg";
 import LoadingGIF from "../Media/loading.gif";
 import WarningSVG from "../Media/warning.svg";
 
+let API_get_sectors = "http://localhost:8080/api/hrsoft/get_sectors";
+let API_recruit = "http://localhost:8080/api/hrsoft/employee/recruit";
+let API_modify = "http://localhost:8080/api/hrsoft/employee/modify";
+let API_terminate = "http://localhost:8080/api/hrsoft/employee/terminate";
+let API_get_employees = "http://localhost:8080/api/hrsoft/get_employees";
+let API_expenses_list = "http://localhost:8080/api/hrsoft/expenses_list";
+let API_expenses_calculate = "http://localhost:8080/api/hrsoft/expenses_calculate";
+let API_invoice_get = "http://localhost:8080/api/hrsoft/invoice_get";
+let API_expenses_add = "http://localhost:8080/api/hrsoft/expenses_add";
+let API_expenses_remove = "http://localhost:8080/api/hrsoft/expenses_remove";
+let HOME = "http://localhost:3000";
+
 const Loading = () => {
     return(
         <div className="loading">
@@ -81,7 +93,7 @@ function HRRecruitForms(props) {
 
     useEffect(() => {
 	const interval = setInterval(() => {
-	    axios.get("http://localhost:8080/api/hrsoft/get_sectors")
+	    axios.get(API_get_sectors)
 		.then((res) => {
 		    setSectors(() => {
 			return(
@@ -119,7 +131,7 @@ function HRRecruitForms(props) {
 	    }
 	};
 	
-	axios.post("http://localhost:8080/api/hrsoft/employee/recruit",
+	axios.post(API_recruit,
 		   data, config)
 	
 	    .then((res) => {
@@ -145,7 +157,7 @@ function HRRecruitForms(props) {
 	    }
 	};
 
-	axios.get("http://localhost:8080/api/hrsoft/employee/modify",
+	axios.get(API_modify,
 		  data)
 	    .then((res) => {
 		setModNotif(res.data);
@@ -241,7 +253,7 @@ function HRTermination() {
 
 	setTerminateNotif(<Loading />);
 	
-	axios.get("http://localhost:8080/api/hrsoft/employee/terminate",
+	axios.get(API_terminate,
 		  {
 		      params: {
 			  id: refs.inputId.current.value
@@ -292,7 +304,7 @@ function HREmployeeList() {
     
     useEffect(() => {
 	const interval = setInterval(() => {
-	    axios.get("http://localhost:8080/api/hrsoft/get_employees")
+	    axios.get(API_get_employees)
 		.then((res) => {
 		    setContent(() => {
 			return(
@@ -334,7 +346,7 @@ function HRListExpenses() {
     
     useEffect(() => {
 	const interval = setInterval(() => {
-	    axios.get("http://localhost:8080/api/hrsoft/expenses_list")
+	    axios.get(API_expenses_list)
 		.then((res) => {
 		    setContent(() => {
 			return(
@@ -380,7 +392,7 @@ function HRExpensesCalculate() {
     function calculate() {
 	setNotif(<Loading />);
 
-	axios.get("http://localhost:8080/api/hrsoft/expenses_calculate", {
+	axios.get(API_expenses_calculate, {
 	    params: {
 		month: refs.inputMonth.current.value
 	    }
@@ -450,7 +462,7 @@ function HRExpensesInvoice() {
 
     function invoice() {
 	setNotif(<Loading />);
-	axios.get("http://localhost:8080/api/hrsoft/invoice_get",
+	axios.get(API_invoice_get,
 		  {
 		      params: {
 			  id: refs.inputId.current.value,
@@ -531,7 +543,7 @@ function HRExpensesManage() {
 	    }
 	};
 
-	axios.post("http://localhost:8080/api/hrsoft/expenses_add",
+	axios.post(API_expenses_add,
 		   data, config)
 	    .then((res) => {
 		setAddNotif(res.data);
@@ -547,7 +559,7 @@ function HRExpensesManage() {
     function remove() {
 	setRemoveNotif(<Loading />);
 
-	axios.get("http://localhost:8080/api/hrsoft/expenses_remove",
+	axios.get(API_expenses_remove,
 		  {
 		      params: {
 			  name: remove_refs.inputName.current.value
@@ -600,7 +612,7 @@ function HRPanel(props) {
     return(
 	<div id="HRPanel">
             <div>
-		<a id="HRPanelHead" href={"http://localhost:3000"}>HRSoft - Back</a>
+		<a id="HRPanelHead" href={HOME}>HRSoft - Back</a>
 	    </div>
 
 	    <div className="HRPanelButtonSection" style={{marginTop: 50}}>

@@ -113,6 +113,8 @@ export default function WMSInventory() {
 	    .catch((err) => {
 		setConsole(err.data.message);
 	    });
+
+	reference: delete_refs.inputDeleteReference.current.value = "";
     }
 
     function modify_item() {

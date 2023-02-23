@@ -23,8 +23,6 @@ export default function WMS(props) {
         <div className="WMS">
 	    <WMSNavbar
 		left = "WMS - Warehouse Management Software"
-		setter={props.setter}
-		content={props.content}
 	    />
 	    <WMSToolbar
 		MainStateSet={setMainContentState}

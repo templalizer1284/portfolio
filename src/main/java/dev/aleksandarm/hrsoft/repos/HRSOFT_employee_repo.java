@@ -1,7 +1,5 @@
 package dev.aleksandarm.hrsoft.repos;
 
-import java.util.Optional;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import dev.aleksandarm.hrsoft.models.HRSOFT_employee_model;

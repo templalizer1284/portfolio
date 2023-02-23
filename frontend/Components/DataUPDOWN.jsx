@@ -5,8 +5,14 @@ import {Base64} from "js-base64";
 import "../Styles/DataUPDOWN.css";
 
 import LoadingGIF from "../Media/loading.gif";
-import DownloadIMG from "../Media/download.svg";
+import DownloadIMG from "../Media/download_test.svg";
 import DeleteIMG from "../Media/delete_button.svg";
+
+let API_download = "http://localhost:8080/api/dataupdown/download";
+let API_delete = "http://localhost:8080/api/dataupdown/delete";
+let API_get_all = "http://localhost:8080/api/dataupdown/get_all";
+let API_upload = "http://localhost:8080/api/dataupdown/upload";
+let HOME = "http://localhost:3000";
 
 const Loading = () => {
     return(
@@ -27,7 +33,7 @@ export default function DataUPDOWN() {
     
     function download(filename) {
 	axios({
-	    url: "http://192.168.0.149:8080/api/dataupdown/download",
+	    url: API_download,
 	    method: "GET",
 	    params: {
 		filename: filename
@@ -47,7 +53,7 @@ export default function DataUPDOWN() {
 
     function delete_file(filename) {
 	axios({
-	    url: "http://192.168.0.149:8080/api/dataupdown/delete",
+	    url: API_delete,
 	    method: "GET",
 	    params: {
 		filename: filename
@@ -63,7 +69,7 @@ export default function DataUPDOWN() {
     
     useEffect(() => {
 	const interval = setInterval(() => {
-	    axios.get("http://192.168.0.149:8080/api/dataupdown/get_all")
+	    axios.get(API_get_all)
 		.then((res) => {
 		    setContent(() => {
 			return(
@@ -107,7 +113,7 @@ export default function DataUPDOWN() {
 	    }
 	};
 
-	axios.post("http://192.168.0.149:8080/api/dataupdown/upload",
+	axios.post(API_upload,
 		   data, config)
 	    .then((res) => {
 		setUploadNotif(res.data);
@@ -122,7 +128,7 @@ export default function DataUPDOWN() {
     return(
         <div id="DataUPDOWN">
             <div id="DataUPDOWNHead">
-		<h1>Data Upload/Download Service                <a href={"http://192.168.0.149:3000"} style={{color: "white", margin: 0}}>(Back)</a></h1>
+		<h1>Data Upload/Download Service                <a href={HOME} style={{color: "white", margin: 0}}>(Back)</a></h1>
 		<input ref={refs.inputFile} type="file"/>
                 <button id="upload_button" onClick={upload}>Upload</button>
 		{UploadNotif}

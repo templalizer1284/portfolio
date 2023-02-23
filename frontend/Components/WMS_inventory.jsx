@@ -1,6 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 
+let API_location_get = "http://localhost:8080/api/wms/layout/location_get";
+let API_register = "http://localhost:8080/api/wms/inventory/register";
+let API_delete = "http://localhost:8080/api/wms/inventory/delete";
+let API_modify_quantity = "http://localhost:8080/api/wms/inventory/modify_quantity";
+let API_relocate = "http://localhost:8080/api/wms/inventory/relocate";
+
 export default function WMSInventory() {
 
     const [ inventory, setInventory ] = useState();
@@ -36,7 +42,7 @@ export default function WMSInventory() {
 
     useEffect(() => {
 	const interval = setInterval(() => {
-	    axios.get("http://localhost:8080/api/wms/layout/location_get")
+	    axios.get(API_location_get)
 		.then((res) => {
 		    setLocations(() => {
 			return(
@@ -83,7 +89,7 @@ export default function WMSInventory() {
 	if(refs.inputRegisterQuantity.current.value === ""){setConsole("Form is not complete."); return;}
 	if(refs.inputRegisterPPU.current.value === ""){setConsole("Form is not complete."); return;}
 	
-	axios.post("http://localhost:8080/api/wms/inventory/register", data, config)
+	axios.post(API_register, data, config)
 	    .then((res) => {
 		setConsole(res.data);
 	    })
@@ -100,7 +106,7 @@ export default function WMSInventory() {
     }
     
     function delete_item() {
-	axios.get("http://localhost:8080/api/wms/inventory/delete",
+	axios.get(API_delete,
 		  {
 		      params: {
 			  reference: delete_refs.inputDeleteReference.current.value,
@@ -119,7 +125,7 @@ export default function WMSInventory() {
 
     function modify_item() {
 	setConsole("");
-	axios.get("http://localhost:8080/api/wms/inventory/modify_quantity", {
+	axios.get(API_modify_quantity, {
 	    params: {
 		reference: modify_refs.inputModifyReference.current.value,
 		location: modify_refs.inputModifyLocation.current.value,
@@ -140,7 +146,7 @@ export default function WMSInventory() {
 
     function relocate_item() {
 	setConsole("");
-	axios.get("http://localhost:8080/api/wms/inventory/relocate",
+	axios.get(API_relocate,
 		  {
 		      params: {
 			  reference: relocate_refs.inputRelocateReference.current.value,

@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.041e05cb.css",
-    "main.js": "/static/js/main.06b3cd0e.js",
+    "main.css": "/static/css/main.a1a12b18.css",
+    "main.js": "/static/js/main.337e301d.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/download_test.svg": "/static/media/download_test.b449fd3e14bed1ab39d5f5b459c7cc01.svg",
     "static/media/10.png": "/static/media/10.f4b083421fbc342c6da1.png",
     "static/media/5.png": "/static/media/5.5d736ac3dc01f817ff4d.png",
     "static/media/9.png": "/static/media/9.d6e070513b1e39f678bf.png",
@@ -18,18 +19,24 @@
     "static/media/2.png": "/static/media/2.057326c626e54dd53ad0.png",
     "static/media/loading.gif": "/static/media/loading.803f24369a085e35482e.gif",
     "static/media/airbnb-logo.png": "/static/media/airbnb-logo.dcb558306cc47aee84eb.png",
+    "static/media/hs_background.svg": "/static/media/hs_background.9940517d1babba99a6a393f4d0a0892e.svg",
     "static/media/settings.svg": "/static/media/settings.227db5dbe35d440e9fa47330dfbd5baf.svg",
+    "static/media/vstreamlogo.svg": "/static/media/vstreamlogo.9cb30bb83ff6ea228f2f6204eefeb0bf.svg",
     "static/media/Inventory_icon.svg": "/static/media/Inventory_icon.75e1bd80f30f238249c2475de20783ac.svg",
+    "static/media/question_mark.svg": "/static/media/question_mark.0a62d141011a8ebbf8fd9abc87a401cc.svg",
+    "static/media/delete_button.svg": "/static/media/delete_button.c3547392d993b1afb0b3ee9bfe2a2b4c.svg",
+    "static/media/warning.svg": "/static/media/warning.1e6b463ce553d6613091d9f662bd230b.svg",
     "static/media/home.svg": "/static/media/home.c9109c9075853e558a88c718b4fa9991.svg",
     "static/media/warehouse.svg": "/static/media/warehouse.c4b7e831f24d5cb318322746f27797a7.svg",
     "index.html": "/index.html",
     "static/media/layout.svg": "/static/media/layout.1023b67ec4ab80527dd951e3122a4b6e.svg",
-    "main.041e05cb.css.map": "/static/css/main.041e05cb.css.map",
-    "main.06b3cd0e.js.map": "/static/js/main.06b3cd0e.js.map",
+    "static/media/play.svg": "/static/media/play.b89e35efba79fe62e09fbf775c12ff91.svg",
+    "main.a1a12b18.css.map": "/static/css/main.a1a12b18.css.map",
+    "main.337e301d.js.map": "/static/js/main.337e301d.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.041e05cb.css",
-    "static/js/main.06b3cd0e.js"
+    "static/css/main.a1a12b18.css",
+    "static/js/main.337e301d.js"
   ]
 }
