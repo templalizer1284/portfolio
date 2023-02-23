@@ -6,15 +6,15 @@ This project in its final form will consist of:
 1. `DONE` WMS - Warehouse management software
 2. `DONE` AirBNB - Design Clone of AirBNB(Without backend)
 3. `DONE` Data Upload/Download Website
-4. Video Streaming Website
+4. `DONE` Video Streaming Website
 5. `DONE` HRSoft - Human resource management software.
 
 Portfolio will be ready after these two are done:
 
-1. Develop all five projects noted up there.
+1. `DONE` Develop all five projects noted up there.
 2. Final polishing of everything.
 
-Currently, security is not implemented.
+Currently, basic security is implemented. (Spring Security Defaults, good enough for now).
 
 <h1>Screenshots</h1>
 
