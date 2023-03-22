@@ -1,7 +1,5 @@
 # portfolio
 
-<h1>Project is deployed at http://194.36.88.104</h1>
-
 Personal portfolio showcase.
 
 This project in its final form will consist of:
